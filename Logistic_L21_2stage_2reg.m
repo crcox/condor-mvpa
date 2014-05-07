@@ -135,7 +135,7 @@ while iter < opts.maxIter
     
     % the Armijo Goldstein line search scheme
     while true
-        Wzp = soslasso_shrink_logistic(Ws - gWs/gamma,group_arr,groups,lambda2/gamma,lambda1);
+        Wzp = soslasso_shrink_logistic(Ws - gWs/gamma,group_arr,groups,lambda2/gamma,lambda1/gamma);
 
 %         Wzp = FGLasso_projection_2stage(Ws - gWs/gamma, lambda2/gamma, group_arr);
         Czp = Cs - gCs/gamma;
